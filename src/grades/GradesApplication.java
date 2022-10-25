@@ -58,7 +58,7 @@ public class GradesApplication {
             String userInput = reader.nextLine();
 
             // using if...else control statement, we check if userInput matches and if it does
-            // it will output the student name, username and average and if does not
+            // it will output the student name, username and average and if does not it will
             // output the mismatched username
             if (students.containsKey(userInput)){
                 System.out.printf("Name: %s - Github username: %s%n", students.get(userInput).getName(), userInput);
@@ -68,7 +68,9 @@ public class GradesApplication {
             }
             System.out.println("Would you like to see another student?");
             userChoice = reader.nextLine();
-            System.out.println("Goodbye, and have a wonderful day!");
+            if (userChoice.equals("n")) {
+                System.out.println("Goodbye, and have a wonderful day!");
+            }
         }
 
     }
